@@ -28,6 +28,13 @@ public class Main {
 
            long ---> 8bytes--->8*8---> 64bits--> 1 111111.......  --->
 
+           To store the decimal values, we have the following data types.
+
+           double --> 8bytes-->8*8-->64--->
+           float---->4bytes--> 4*8--->
+
+           char---> 2bytes-->2*8-->16bits
+
 
            General formulae to calculate the range of any datatype
 
@@ -49,6 +56,32 @@ public class Main {
         int mt = 345346344;
 
         long xyt = 346346345999999999l;   ///3463
+
+
+
+        // with decimal
+        // by default double
+        double amount = 8.46;
+
+        float amount1 = 8.45f;
+
+
+        // char
+
+        char grade = 'M';    // size 2 bytes  ASCII  A-->65, B-66 '0'-->48
+                              // 2*8-->16 --> -2^15 to (2^15)-1
+
+        // boolean
+
+        boolean isLoggedIn = false;
+
+
+
+
+
+
+
+
 
 
 
