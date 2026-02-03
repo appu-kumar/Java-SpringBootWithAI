@@ -1,4 +1,4 @@
-
+// local vs instance variable---> local directly declared within block(method, loop, if etc. ) and instance within class okay
 // user defined datatype
 class Teacher {
     // data member
