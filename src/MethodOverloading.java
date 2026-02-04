@@ -1,5 +1,5 @@
 class TestMethodOverloading {
-
+    // This happens at compile time that is why we call it compile time polymorphism
     // method overloading---> same method name, but different list of the parameters
     // Note:: if number of parameters are different then well and good if same then data types must be different okay
 
