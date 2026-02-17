@@ -1,11 +1,23 @@
 abstract class Car {
     int fuelCapacity;
+     Car(){
+        System.out.println("calling abstract constructor");
+    }
     public abstract void startEngine();
     public abstract void stopEngine();
-
     void startCar(){
         System.out.println("start the car");
     }
+    // it is inherited not overridden ok, static method is resolved at compile time and overridden is run time.
+    // if you create the same method in child it will treat as specialized method okay. we call it method hiding.
+    public static void printt(){
+        System.out.println("static method");
+    }
+}
+
+abstract class DBconnection {
+    public abstract  void getDbConnection();
+    public abstract void close();
 }
 
 /*
@@ -15,6 +27,17 @@ abstract class Car {
   4)Object of the abstract class can not be created because abstract means incomplete.
  */
 
+class MarutiSuzuki extends Car {
+
+    public void startEngine(){
+        System.out.println("start maruti");
+    }
+
+    public void stopEngine(){
+        System.out.println("stop maruti");
+    }
+}
+
 class BMWCar extends Car {
 
     private String name;
@@ -23,7 +46,9 @@ class BMWCar extends Car {
     // Note::- There is small difference between inherited method and overridden, overridden is modified in the child
     // however inherited method is used as it is.
 
+    BMWCar(){
 
+    }
     // Both are overridden methods
     public void startEngine(){
         System.out.println("Start bmw car.");
@@ -51,6 +76,12 @@ public class InheritanceWithAbstractclass {
         Car car = new BMWCar();
 
         System.out.println("BMW car...");
+        car.startEngine();
+        car.stopEngine();
+
+        car = new MarutiSuzuki();
+        car.startEngine();
+        car.stopEngine();
     }
 }
 
