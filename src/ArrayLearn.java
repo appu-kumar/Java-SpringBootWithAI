@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ArrayLearn {
     public static void main(String[] args){
         System.out.println("hi");
@@ -6,17 +8,30 @@ public class ArrayLearn {
                 {4,5,6}
         };
 
+
+
         // matrix[2][2]  out of bound run time error.
         // int[] arr = {1,2,"appu"} // wrong we can store int type only okay check lhs.
 
 
-        for(int[] row : matrix){
+        // enhanced loop.
+       /* for(int[] row : matrix){
             for(int val:row){
                 System.out.print(val+" ");
             }
             System.out.println();
-        }
+        }*/
 
+        // Array has the fixed size
+        // Do not have built-in helper methods
+        // So Java gives us Arrays class to:
+
+        int[] arr = {1,6,3,5,4,2};
+        Arrays.sort(arr);
+        System.out.print(Arrays.toString(arr));
+        Arrays.fill(arr,-1);
+        System.out.print(Arrays.toString(arr));
+        // many more methods use according to ur requirement.
     }
 }
 
@@ -55,4 +70,31 @@ and allows fast access using index.
             {4,5,6}
         };
       int[][] matrix = new int[3][3];
+
+      🔷 When NOT to Use Array?
+       ❌ When size changes frequently
+       ❌ When inserting/deleting from middle often
+       Use:
+        ArrayList
+        LinkedList
+
+      Note:: Array is part of the core java, ArrayList and LinkedList both are the part of the collection java framework(To use them we need to import lib)
+
+
+
+      🚀 Why is Arrays Class Important?
+        Because arrays in Java are:
+        Fixed size
+        Basic data structure
+        Do not have built-in helper methods
+        So Java gives us Arrays class to:
+
+        ✔ Sort
+        ✔ Search
+        ✔ Compare
+        ✔ Convert
+        ✔ Fill
+        ✔ Copy
+        ✔ Print
+        Without it, you'd write everything manually.
  */
