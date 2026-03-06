@@ -22,7 +22,6 @@ class ATM {
         else {
             throw new InvalidCredentials("Invalid credentials, Please try again!");
         }
-
     }
 
     public void input(){
