@@ -1,8 +1,20 @@
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+// create your annotation like this
+@Retention(RetentionPolicy.SOURCE)
+@Target({ElementType.TYPE})
+@interface Myannotation {
+
+}
+
 class Paint {
      public void test(){
          System.out.println("parent wala");
      }
 }
+
 
 class AsianPaint extends Paint{
 
@@ -102,5 +114,12 @@ It does not exist at runtime
 ✅ One line definition (for interview):
 
 Annotation is a metadata mechanism in Java used to provide additional information to the compiler, tools, or frameworks without affecting the program logic.
+
+
+| Retention Type | Available in Source | Stored in Class File | Available at Runtime |
+| -------------- | ------------------- | -------------------- | -------------------- |
+| SOURCE         | ✅ Yes               | ❌ No                 | ❌ No                 |
+| CLASS          | ✅ Yes               | ✅ Yes                | ❌ No                 |
+| RUNTIME        | ✅ Yes               | ✅ Yes                | ✅ Yes                |
 
  */
